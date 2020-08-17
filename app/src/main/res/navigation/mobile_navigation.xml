@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/navigation_transport">
+
+    <fragment
+        android:id="@+id/navigation_yet"
+        android:name="com.example.buyauto.ui.yet.YetFragment"
+        android:label="@string/title_yet"
+        tools:layout="@layout/fragment_yet" >
+        <action
+            android:id="@+id/action_navigation_yet_to_sellAutoAdvertFragment"
+            app:destination="@id/sellAutoAdvertFragment" />
+        <action
+            android:id="@+id/action_navigation_yet_to_sellAutoReqFragment"
+            app:destination="@id/sellAutoReqFragment" />
+        <action
+            android:id="@+id/action_navigation_yet_to_sellAutoReqFragment2"
+            app:destination="@id/sellAutoReqFragment" />
+        <action
+            android:id="@+id/action_navigation_yet_to_sellAutoFragment"
+            app:destination="@id/sellAutoFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_transport"
+        android:name="com.example.buyauto.ui.transport.TransportFragment"
+        android:label="@string/title_transport"
+        tools:layout="@layout/fragment_transport">
+        <action
+            android:id="@+id/action_navigation_transport_to_navigation_advert"
+            app:destination="@id/navigation_advert" />
+        <action
+            android:id="@+id/action_navigation_transport_to_sedanFragment"
+            app:destination="@id/sedanFragment" />
+        <action
+            android:id="@+id/action_navigation_transport_to_navigation_yet"
+            app:destination="@id/navigation_yet" />
+        <action
+            android:id="@+id/action_navigation_transport_to_comtransFragment"
+            app:destination="@id/comtransFragment" />
+        <action
+            android:id="@+id/action_navigation_transport_to_motoFragment"
+            app:destination="@id/motoFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_advert"
+        android:name="com.example.buyauto.ui.advert.AdvertFragment"
+        android:label="@string/title_ad"
+        tools:layout="@layout/fragment_advert" />
+    <fragment
+        android:id="@+id/chooseGenerationFragment"
+        android:name="com.example.buyauto.ui.transport.transport_frg.ChooseGenerationFragment"
+        android:label="fragment_choose_generation"
+        tools:layout="@layout/fragment_choose_generation" />
+    <fragment
+        android:id="@+id/chooseMarkFragment"
+        android:name="com.example.buyauto.ui.transport.transport_frg.ChooseMarkFragment"
+        android:label="fragment_choose_mark"
+        tools:layout="@layout/fragment_choose_mark" />
+    <fragment
+        android:id="@+id/chooseModelFragment"
+        android:name="com.example.buyauto.ui.transport.transport_frg.ChooseModelFragment"
+        android:label="fragment_choose_model"
+        tools:layout="@layout/fragment_choose_model" />
+    <fragment
+        android:id="@+id/comtransFragment"
+        android:name="com.example.buyauto.ui.transport.transport_frg.ComtransFragment"
+        android:label="fragment_comtrans"
+        tools:layout="@layout/fragment_comtrans" >
+        <action
+            android:id="@+id/action_comtransFragment_to_motoFragment"
+            app:destination="@id/motoFragment" />
+        <action
+            android:id="@+id/action_comtransFragment_to_sedanFragment"
+            app:destination="@id/sedanFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/motoFragment"
+        android:name="com.example.buyauto.ui.transport.transport_frg.MotoFragment"
+        android:label="fragment_moto"
+        tools:layout="@layout/fragment_moto" >
+        <action
+            android:id="@+id/action_motoFragment_to_comtransFragment"
+            app:destination="@id/comtransFragment" />
+        <action
+            android:id="@+id/action_motoFragment_to_sedanFragment"
+            app:destination="@id/sedanFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/sedanFragment"
+        android:name="com.example.buyauto.ui.transport.transport_frg.SedanFragment"
+        android:label="fragment_sedan"
+        tools:layout="@layout/fragment_sedan" >
+        <action
+            android:id="@+id/action_sedanFragment_to_comtransFragment"
+            app:destination="@id/comtransFragment" />
+        <action
+            android:id="@+id/action_sedanFragment_to_motoFragment"
+            app:destination="@id/motoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/sellAutoFragment"
+        android:name="com.example.buyauto.ui.yet.sellFragment.SellAutoFragment"
+        android:label="fragment_sell_auto"
+        tools:layout="@layout/fragment_sell_auto">
+        <action
+            android:id="@+id/action_sellAutoFragment_to_navigation_yet"
+            app:destination="@id/navigation_yet" />
+    </fragment>
+    <fragment
+        android:id="@+id/sellAutoAdvertFragment"
+        android:name="com.example.buyauto.ui.yet.sellFragment.SellAutoAdvertFragment"
+        android:label="fragment_sell_auto_advert"
+        tools:layout="@layout/fragment_sell_auto_advert" >
+        <action
+            android:id="@+id/action_sellAutoAdvertFragment_to_sellReceiptFragment"
+            app:destination="@id/sellReceiptFragment" />
+        <action
+            android:id="@+id/action_sellAutoAdvertFragment_to_navigation_yet"
+            app:destination="@id/navigation_yet" />
+    </fragment>
+    <fragment
+        android:id="@+id/sellAutoReqFragment"
+        android:name="com.example.buyauto.ui.yet.sellFragment.SellAutoReqFragment"
+        android:label="fragment_sell_auto_req"
+        tools:layout="@layout/fragment_sell_auto_req" >
+        <action
+            android:id="@+id/action_sellAutoReqFragment_to_navigation_yet"
+            app:destination="@id/navigation_yet" />
+    </fragment>
+    <fragment
+        android:id="@+id/sellReceiptFragment"
+        android:name="com.example.buyauto.ui.yet.sellFragment.SellReceiptFragment"
+        android:label="fragment_sell_receipt"
+        tools:layout="@layout/fragment_sell_receipt" >
+        <action
+            android:id="@+id/action_sellReceiptFragment_to_navigation_yet2"
+            app:destination="@id/navigation_yet" />
+    </fragment>
+</navigation>

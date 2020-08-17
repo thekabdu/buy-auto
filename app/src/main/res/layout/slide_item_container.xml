@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="7dp"
+        android:backgroundTint="@color/colorWhite"
+        app:layout_constraintTop_toBottomOf="@+id/view"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="12dp">
+
+        <ImageView
+            android:id="@+id/img_viewPager"
+            android:layout_width="32dp"
+            android:layout_height="29dp"
+            android:src="@drawable/merc"
+            android:scaleType="centerCrop"
+            app:layout_constraintTop_toBottomOf="@+id/cardview"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginVertical="20dp"/>
+
+        <TextView
+            android:id="@+id/txtCar"
+            android:layout_width="136dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="52dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="24dp"
+            android:text="@string/car_name"
+            android:textAppearance="@style/txtCar" />
+
+        <TextView
+            android:id="@+id/txtCar_city"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/title_city"
+            android:textSize="10sp"
+            android:layout_marginStart="52dp"
+            android:layout_marginTop="48dp"
+            android:layout_marginBottom="12dp"
+            android:layout_marginEnd="100dp"/>
+
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

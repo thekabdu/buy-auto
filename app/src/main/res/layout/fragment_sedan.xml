@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    tools:context=".ui.transport.transport_frg.SedanFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/title_transport"
+                android:textAppearance="@style/txt_title_b"
+                android:textColor="@color/colorText"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="5dp"/>
+
+            <TextView
+                android:id="@+id/txt_city"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/title_city"
+                android:textAppearance="@style/label"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="5dp"/>
+
+            <EditText
+                android:id="@+id/search_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginVertical="10dp"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:paddingVertical="8dp"
+                android:background="@drawable/button_bg10"
+                android:backgroundTint="@color/colorBackground"
+                android:hint="@string/search_text"
+                android:drawableStart="@drawable/ic_baseline_search_24"
+                app:layout_constraintBottom_toBottomOf="@+id/view"
+                app:layout_constraintTop_toBottomOf="@+id/textView">
+
+            </EditText>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.cardview.widget.CardView
+            android:id="@+id/cardview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="7dp"
+            android:backgroundTint="@color/colorWhite"
+            app:layout_constraintTop_toBottomOf="@+id/view"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp">
+
+            <ImageView
+                android:id="@+id/img_viewPager"
+                android:layout_width="32dp"
+                android:layout_height="29dp"
+                android:layout_marginVertical="20dp"
+                android:layout_marginStart="10dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/mercc"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardview" />
+
+            <TextView
+                android:id="@+id/txtCar"
+                android:layout_width="136dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="55dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="35dp"
+                android:text="@string/car_name"
+                android:textAppearance="@style/txtCar" />
+
+            <TextView
+                android:id="@+id/txtCar_city"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/title_city"
+                android:textSize="10sp"
+                android:layout_marginStart="55dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="12dp" />
+
+        </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/sedan_cardview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="7dp"
+        android:backgroundTint="@color/colorWhite"
+        app:layout_constraintTop_toBottomOf="@+id/view"
+        app:layout_constraintStart_toEndOf="@id/cardview"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="20dp">
+
+        <ImageView
+            android:id="@+id/img_Pager"
+            android:layout_width="45dp"
+            android:layout_height="29dp"
+            android:layout_marginVertical="20dp"
+            android:layout_marginStart="10dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/chery"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardview" />
+
+        <TextView
+            android:id="@+id/txtCar2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="65dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="24dp"
+            android:text="Chery Bonus (A13)"
+            android:textAppearance="@style/txtCar" />
+
+        <TextView
+            android:id="@+id/txtCar_city2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Алматы + ещё 2"
+            android:textSize="10sp"
+            android:layout_marginStart="65dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="12dp" />
+
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button_bg10"
+        android:backgroundTint="@color/colorPrimary"
+        style="@style/MyCustomTabLayout"
+        app:tabIndicatorGravity="stretch"
+        app:tabMaxWidth="0dp"
+        app:tabGravity="fill"
+        app:tabMode="fixed"
+        app:tabSelectedTextColor="@color/colorPrimary"
+        app:tabTextColor="@color/colorWhite"
+        app:tabTextAppearance="@style/MyCustomTextAppearance"
+        app:layout_constraintTop_toBottomOf="@+id/sedan_cardview">
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tabitem_sedan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:text="@string/sedan" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tabitem_comtrans"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/comtr" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tabitem_moto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/moto" />
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_bg10"
+        android:backgroundTint="@color/colorWhite"
+        app:layout_constraintTop_toBottomOf="@+id/tab_layout"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="16dp">
+
+        <EditText
+            android:id="@+id/inputText1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/colorWhite"
+            android:hint="@string/mark_model"
+            android:drawableEnd="@drawable/ic_car"
+            android:padding="15dp" />
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_marginHorizontal="13dp"
+            android:background="@android:color/darker_gray" />
+
+        <EditText
+            android:id="@+id/inputText2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/parametrs"
+            android:backgroundTint="@color/colorWhite"
+            android:drawableEnd="@drawable/ic_settings"
+            android:padding="15dp"/>
+
+    </TableLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/bottom_nav_menu"
+        app:labelVisibilityMode="labeled"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

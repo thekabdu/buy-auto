@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.transport.transport_frg.ChooseMarkFragment"
+    android:background="@color/colorBackground">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorBackground">
+
+       <androidx.constraintlayout.widget.ConstraintLayout
+           android:id="@+id/choose_view"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:background="@color/colorWhite"
+           app:layout_constraintTop_toTopOf="parent">
+
+           <ImageView
+               android:id="@+id/icon_back"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:src="@drawable/back"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toTopOf="parent"
+               app:layout_constraintBottom_toBottomOf="parent"
+               android:layout_marginStart="16dp"/>
+
+           <ImageView
+               android:id="@+id/icon_row"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:src="@drawable/ic_compare"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintTop_toTopOf="parent"
+               app:layout_constraintBottom_toBottomOf="parent"
+               android:layout_marginEnd="16dp"/>
+
+           <TextView
+               android:id="@+id/new_choose"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="@string/news"
+               android:textAppearance="@style/textView6"
+               app:layout_constraintEnd_toStartOf="parent"
+               app:layout_constraintStart_toEndOf="parent"
+               app:layout_constraintTop_toTopOf="parent"/>
+
+           <TextView
+               android:id="@+id/num_choose"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="@string/txt_new_num"
+               app:layout_constraintTop_toBottomOf="@+id/new_choose"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintEnd_toEndOf="parent"/>
+
+       </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TableLayout
+            android:id="@+id/tablelay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/frame"
+            app:layout_constraintTop_toBottomOf="@+id/choose_view"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/button_bg10"
+            android:layout_marginTop="21dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="16dp">
+
+            <TableRow
+                android:id="@+id/row1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="6dp">
+
+                <TextView
+                    android:id="@+id/simpleTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_bg10"
+                    android:backgroundTint="@color/colorWhite"
+                    android:text="@string/all"
+                    android:textColor="@color/frame"
+                    android:textSize="15sp"
+                    android:padding="5dp"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:id="@+id/simpleTextView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/neww"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="15sp"
+                    android:padding="5dp"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:id="@+id/simpleTextView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.33"
+                    android:text="@string/prob"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="15sp"
+                    android:padding="5dp"
+                    android:gravity="center" />
+
+            </TableRow>
+
+        </TableLayout>
+
+        <EditText
+            android:id="@+id/inputText1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_bg10"
+            android:backgroundTint="@color/colorWhite"
+            android:hint="@string/mark_model"
+            android:drawableEnd="@drawable/ic_car"
+            android:padding="15dp"
+            app:layout_constraintTop_toBottomOf="@+id/tablelay"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="20dp"/>
+
+        <TextView
+            android:id="@+id/txt_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/parametrs"
+            android:textAllCaps="false"
+            android:textColor="@color/colorText"
+            app:layout_constraintTop_toBottomOf="@+id/inputText1"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:padding="15dp"
+            android:drawablePadding="8dp"
+            android:drawableStart="@drawable/ic_setting"
+            android:background="@drawable/button_bg10"
+            android:backgroundTint="@color/colorWhite"/>
+
+        <TextView
+            android:id="@+id/Button_adder"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/title_city"
+            android:textAllCaps="false"
+            android:textColor="@color/colorText"
+            app:layout_constraintTop_toBottomOf="@+id/inputText1"
+            app:layout_constraintStart_toEndOf="@+id/txt_view"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="16dp"
+            android:padding="15dp"
+            android:layout_marginEnd="10dp"
+            android:drawablePadding="8dp"
+            android:drawableEnd="@drawable/ic_baseline_cancel_24"
+            android:background="@drawable/button_bg10"
+            android:backgroundTint="@color/colorWhite"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/container_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/Button_adder"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="20dp"
+            android:background="@color/colorWhite">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/title_city"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_margin="16dp"/>
+
+            <ImageView
+                android:id="@+id/imageView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_favorite_border_24"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_margin="16dp"/>
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView3"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="16dp"/>
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/car_title"
+                android:textAppearance="@style/textView2"
+                app:layout_constraintTop_toBottomOf="@+id/viewPager"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="12dp"
+                android:paddingEnd="15dp"
+                android:layout_marginHorizontal="16dp" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/title_price_car"
+                android:textAppearance="@style/textView5"
+                app:layout_constraintTop_toBottomOf="@+id/textView2"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="12dp"
+                android:layout_marginStart="16dp"/>
+
+            <TextView
+                android:id="@+id/txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Рассрочка 0% на 1 год"
+                android:textColor="@color/colorWhite"
+                android:background="@drawable/button_bg"
+                android:backgroundTint="@color/frame"
+                app:layout_constraintTop_toBottomOf="@+id/textView5"
+                app:layout_constraintStart_toStartOf="parent"
+                android:padding="8dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginStart="16dp"/>
+
+            <View
+                android:id="@+id/viewline"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                app:layout_constraintTop_toBottomOf="@+id/txt"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="12dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"/>
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/time_lastview"
+                app:layout_constraintTop_toBottomOf="@+id/viewline"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="12dp"
+                android:layout_marginStart="16dp"/>
+
+            <ImageView
+                android:id="@+id/imageView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_remove_red_eye_24"
+                app:layout_constraintTop_toBottomOf="@+id/viewline"
+                app:layout_constraintStart_toEndOf="@+id/textView6"
+                android:layout_marginTop="12dp"
+                android:layout_marginStart="32dp"/>
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/viewer_incard"
+                app:layout_constraintStart_toEndOf="@+id/imageView10"
+                app:layout_constraintTop_toBottomOf="@+id/viewline"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="16dp"/>
+
+
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_more_horiz_24"
+                app:layout_constraintTop_toBottomOf="@+id/viewline"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/container_view"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="20dp"
+            android:background="@color/colorWhite">
+
+            <TextView
+                android:id="@+id/txt_city"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/title_city"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_margin="16dp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/ic_crown"/>
+
+            <ImageView
+                android:id="@+id/icon_like"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_like_24"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_margin="16dp"/>
+
+            <LinearLayout
+                android:id="@+id/recyclerviewer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/txt_city"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="16dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="84dp"
+                    android:src="@drawable/img_car"/>
+
+                <TextView
+                    android:id="@+id/txt_call"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Позвонить"
+                    android:drawableTop="@drawable/ic_phone"
+                    android:drawableTint="@color/colorWhite"
+                    android:textColor="@color/colorWhite"
+                    android:background="#3C4858"
+                    android:layout_marginStart="3dp"
+                    android:drawablePadding="10dp"
+                    android:padding="16dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Позвонить"
+                    android:drawableTop="@drawable/ic_comment"
+                    android:drawableTint="@color/colorWhite"
+                    android:textColor="@color/colorWhite"
+                    android:background="@drawable/corner_radius"
+                    android:backgroundTint="#1F2D3D"
+                    android:layout_marginStart="3dp"
+                    android:drawablePadding="10dp"
+                    android:padding="16dp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txt_car"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/car_title"
+                android:textAppearance="@style/textView2"
+                app:layout_constraintTop_toBottomOf="@+id/recyclerviewer"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="12dp"
+                android:paddingEnd="15dp"
+                android:layout_marginStart="16dp" />
+
+            <TextView
+                android:id="@+id/txt_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/title_price_car"
+                android:textAppearance="@style/textView5"
+                app:layout_constraintTop_toBottomOf="@+id/txt_car"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="12dp"
+                android:layout_marginStart="16dp"/>
+
+
+            <View
+                android:id="@+id/viewline2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                app:layout_constraintTop_toBottomOf="@+id/txt_price"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="12dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"/>
+
+            <TextView
+                android:id="@+id/txt_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/time_lastview"
+                app:layout_constraintTop_toBottomOf="@+id/viewline2"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="12dp"
+                android:layout_marginStart="16dp"/>
+
+            <ImageView
+                android:id="@+id/icon_viewer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_remove_red_eye_24"
+                app:layout_constraintTop_toBottomOf="@+id/viewline2"
+                app:layout_constraintStart_toEndOf="@+id/txt_time"
+                android:layout_marginTop="12dp"
+                android:layout_marginStart="32dp"/>
+
+            <TextView
+                android:id="@+id/txt_viewer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/viewer_incard"
+                app:layout_constraintStart_toEndOf="@+id/icon_viewer"
+                app:layout_constraintTop_toBottomOf="@+id/viewline2"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="16dp"/>
+
+
+            <ImageView
+                android:id="@+id/icon_setting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_more_horiz_24"
+                app:layout_constraintTop_toBottomOf="@+id/viewline2"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">BuyAuto</string>
+    <string name="title_transport">Транспорт</string>
+    <string name="title_ad">Объявления</string>
+    <string name="title_yet">Ещё</string>
+    <string name="title_logout">Выйти</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="search_text">Поиск</string>
+    <string name="title_city">Алматы</string>
+    <string name="text_P">Проверенное авто хорошая покупка!</string>
+    <string name="car_title"> <b>Mercedes-Benz</b> GL-klasse 4x4 || (W463) Рейстайлинг 4 500 4х4, 2016</string>
+    <string name="car_name">Mercedes-Benz</string>
+    <string name="title_price_car">46 700 000 ₸</string>
+    <string name="time_lastview">час назад</string>
+    <string name="viewer_incard">20 768</string>
+    <string name="mark_model">Марка, модель</string>
+    <string name="parametrs">Параметры</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="news">Сначала новое</string>
+    <string name="any">Любой регион</string>
+    <string name="finded">Найдено 1</string>
+    <string name="f_price">8 000 000 тг</string>
+    <string name="g_year">Поколение</string>
+    <string name="all">Все</string>
+    <string name="neww">Новые</string>
+    <string name="prob">С пробегом</string>
+    <string name="sedan">Легковые</string>
+    <string name="comtr">Комтранс</string>
+    <string name="moto">Мото</string>
+    <string name="txt_new_num">100 500 предл.</string>
+    <string name="centercredit_auto_nomad">Услуги оказываются АО CenterCredit. Пример расчкта условий по кредиту носит исключительно информационный характер и не является публичной офертой. Auto Nomad не несёт ответственности за действия третьих лиц.</string>
+
+</resources>
