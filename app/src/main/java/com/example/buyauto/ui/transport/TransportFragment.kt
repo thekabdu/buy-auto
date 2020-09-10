@@ -32,7 +32,6 @@ class TransportFragment : Fragment(R.layout.fragment_transport) {
         viewPagerAdapter = ViewPagerAdapter(childFragmentManager)
         viewPager = view.findViewById(R.id.tr_viewPager)
         viewPager.adapter = viewPagerAdapter
-
     }
 
 }
